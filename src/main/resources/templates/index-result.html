@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ALL BALANCE SYS</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="autorisation.css" th:rel="stylesheet" th:href="autorisation.css">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container1">
+        <!-- ================NAVBAR======================== -->
+        <ul class="menu">
+            <li><a class="active" th:href="@{/index-result}">HOME</a></li>
+            <li><a class="settings" th:href="@{/myasset}">MY ASSET</a>
+            <li><a class="settings" th:href="@{/myaccounts}">MY ACCOUNTS</a>
+            <li><a class="settings" th:href="@{/}">MARKET</a>
+            <li><a class="settings" th:href="@{/}">TRADING</a>
+
+            <li><a class="settings" sec:authorize="hasRole('ADMIN')" th:href="@{/}">List Users</a>
+            <li><a class="settings" sec:authorize="hasRole('ADMIN')" th:href="@{/}">Support Mail</a>
+        </ul>
+    </div>
+</header>
+<!-- ================MAIN======================== -->
+<section id="index" class="index">
+    <div class="products">
+        <h1>Asset Unified System</h1>
+        <h3>Products:</h3>
+    </div>
+
+</section>
+
+<footer id="index-footer" class="index-footer">
+
+</footer>
+</body>
+</html>

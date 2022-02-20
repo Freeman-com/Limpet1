@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${xUser.getName()}"></title>
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/main.css">
+
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container1">
+        <!-- ================NAVBAR======================== -->
+        <ul class="menu">
+            <li><a class="active" th:href="@{/index-result}">Home</a></li>
+            <li><a class="settings" th:href="@{/myasset}">My Asset</a>
+            <li class="t1232">
+                <a class="settings1">Activity</a>
+                <ul class="sub-menu">
+                    <li style="float: left"><a href="account.html">Transaction</a></li>
+                    <li style="float: left"><a href="account.html">Manage Currencies</a></li>
+                    <li style="float: left"><a href="account.html">Funding Sourses</a></li>
+                    <li style="float: left"><a class="settings" sec:authorize="hasRole('ADMIN')" th:href="@{/}">List
+                        Users</a>
+                    <li style="float: left"><a class="settings" sec:authorize="hasRole('ADMIN')" th:href="@{/}">Support
+                        Mail</a>
+
+                </ul>
+            </li>
+
+            <li><a class="settings" th:href="@{/myaccounts}">My Accounts</a>
+
+            <li class="t1232">
+                <a class="settings1">Broker</a>
+                <ul class="sub-menu">
+                    <li style="float: left"><a href="account.html">IPO</a></li>
+                    <li style="float: left"><a th:href="@{/ico}">ICO</a></li>
+                    <li style="float: left"><a href="account.html">OTC Market</a></li>
+                </ul>
+            </li>
+
+            <li><a class="settings" sec:authorize="hasRole('ADMIN')" th:href="@{/moderator}">Moderator Functions</a>
+
+            <li class="t123">
+                <a class="settings1"> Customer:&nbsp; <span th:text="${xUser.getName()}"></span></a>
+                <ul class="sub-menu">
+                    <li style="float: left"><a href="account.html">Account</a></li>
+                    <li style="float: left"><a href="myasset.html">My Asset</a></li>
+                    <li style="float: left"><a href="myorders.html">My Orders</a></li>
+                    <li style="float: left"><a href="withdrawal.html">Withdrawal</a></li>
+                    <li style="float: right"><a class="active1" th:href="@{/addapipage}">Add API</a></li>
+                    <li style="float: right"><a class="active1" th:href="@{/logout}">LogOut</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<!-- ================ END-NAVBAR ======================== -->
+
+
+<!--=================== MAIN-SIDE ======================-->
+
+<!--=================== LEFT-TABLE ======================-->
+<div class="margin-flex">
+    <div class="balance-info-main">
+        <section class="balance-left-info">
+            <a class="balance-user-name-info"> Balance: $&nbsp;</a>
+            <hr class="hr-custom-001">
+            <table class="wallet-table">
+                <thead class="">
+                <tr class="headings">
+                    <th th:each="list32: ${list}" class="column-title" th:text="${list32}"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr onclick="show('block')" class="headings3" th:each="column: ${columns}" id="tablerow">
+                    <td th:each="list: ${list}" th:text="${column.get(list)}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <!--=================== END LEFT-TABLE ======================-->
+    <!--=================== USER-INFO ======================-->
+    <div class="margin-block">
+        <div class="user-info">
+            <section class="left-info">
+                <a class="user-name-info"> Hello,&nbsp;
+                    <span th:text="${xUser.getName()}"></span>!</a>
+                <hr class="hr-custom-002">
+                <a class="user-id-info"> Customer ID:&nbsp; <span th:text="${xUser.getId()}"></span></a>
+            </section>
+            <section class="right-info">
+                <a class="user-name-info"> Balance:&nbsp;
+                    <!--GET BALANCE-->
+                    <span>$ 5,000.00</span>
+                </a>
+            </section>
+        </div>
+        <div class="withdrawal-block">
+            <section class="left-info-withdrawal">
+                <a class="user-name-info-rx">Compound Admin Table</a>
+                <table class="compound-admin-table">
+                    <thead class="">
+                    <tr class="headings">
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!-- Add Wallet Form -->
+                <div onclick="show('none')" id="gray"></div>
+                <div id="window">
+                    <div class="form">
+                        <h2>Add Wallet</h2>
+                        <h4>No registration Exchange API here</h4>
+                        <form th:action="@{/registerMainWallet}" th:method="POST" name="f1">
+                            <input type="text" placeholder="Name (optional)" name="name1" class="input123">
+                            <input type="text" placeholder="Public Key*" name="publickey" class="input123">
+                            <input type="text" placeholder="Private Key (optional)" name="privatekey"
+                                   class="input123">
+                            <input type="text" placeholder="NetCost (optional)" name="netcost" class="input123">
+                            <input type="radio" name="radio1"> ERC-20 <input type="radio" name="radio1"
+                                                                             class="radio">Bitcoin
+                            <input type="submit" value="ADD" name="sab" class="input123">
+                        </form>
+                    </div>
+                </div>
+                <script>
+                    //View function
+                    function show(state) {
+                        document.getElementById('window').style.display = state;
+                        document.getElementById('gray').style.display = state;
+                    }
+                </script>
+
+
+                <!-- Wallet Page After Click -->
+                <div onclick="show('none')" id="black"></div>
+                <div id="form">
+                    <div class="new-finance">
+                        <div class="new-page">
+                            <div class="table-wallet-zxc">
+                                <div class="dynamic-type-wallet">
+                                    <h2>Ethereum</h2>
+                                </div>
+                                <div class="wallet-from-db">
+                                    <h3>Address:&nbsp;<span
+                                            th:text="0xb69749D19517b0255985C1a6eCDD05a6307dC30E"></span></h3>
+                                </div>
+                                <div class="balance-wallet">
+                                    <h3>Balance:&nbsp;<span th:text="100017eth"></span></h3>
+                                </div>
+                                <div class="value-wallet">
+                                    <h3>Value:&nbsp;<span th:text="101015usd"></span></h3>
+                                </div>
+                                <div class="token-by-wallet">
+                                    <label>
+                                        <h3>Token:&nbsp;<span th:text="e"></span></h3>
+                                        <select class="tokens" name="des">
+                                            <option>Anything</option>
+                                            <option>Anything</option>
+                                            <option>Anything</option>
+                                            <option>Anything</option>
+                                            <option>Anything</option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div style="float: right" class="wallets-block-321123">
+                            <div class="header-tr">
+                                <h4>Transaction</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    //View function
+                    function show(state) {
+                        document.getElementById('form').style.display = state;
+                        document.getElementById('black').style.display = state;
+                    }
+                </script>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

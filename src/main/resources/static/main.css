@@ -1,0 +1,919 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Roboto, monospace;
+    /*background-image: url("download (1).jpg");*/
+    background-color: #F1F3F7;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header {
+    background-color: #5d656a;
+}
+
+header ul {
+    display: flex;
+    padding-left: 25%;
+    list-style: none;
+}
+
+.menu {
+    margin-top: 3%;
+    font-size: 14px;
+    font-family: "Roboto Light", monospace;
+}
+
+header li {
+    position: relative;
+
+}
+
+header li:hover .sub-menu {
+
+    display: flex;
+}
+
+header a {
+    display: flex;
+    color: beige;
+    text-decoration: none;
+    /*background-color: #343a40;*/
+    background-color: #5d656a;
+    padding: 0.5em;
+    white-space: nowrap;
+
+}
+
+header a:hover {
+    background-color: orange;
+}
+
+header a:focus {
+    outline: none;
+    background-color: orange;
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+}
+
+.t123 {
+    display: block;
+    margin-left: 30%;
+}
+
+/*SECTION1*/
+/*    CENTRE-SIDE*/
+
+
+.sub-menu1 {
+    font-family: Roboto, monospace;
+    font-size: 16px;
+}
+
+.sub-menu1 h {
+    padding-left: 0%;
+}
+
+.centre-side-section-first a {
+    display: block;
+    color: darkgray;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.centre-side-section-first ul {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.registration-btn1232 {
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registration-btn1233 {
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    background-color: #343a40;
+    color: red;
+    padding: 7px 20px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/*  END CENTRE-SIDE*/
+/* END SECTION1*/
+
+
+/*==========================*/
+
+.main-table {
+
+    padding-left: 11%;
+    padding-top: 15%;
+    width: 100%;
+    height: 50vh;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    color: black;
+    border-collapse: collapse;
+    overflow: hidden; /* Скрываем все за пределами таблицы */
+}
+
+.headings {
+
+    text-align: left;
+    background: #ff4800;
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+}
+
+.headings2 {
+    background: ivory;
+}
+
+.main-table tr:hover {
+    background: #65994c; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.td123 {
+
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+.add-api {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.add-api h4 {
+    color: white;
+    font-family: Roboto, monospace;
+}
+
+.add-api input [type=text] {
+    padding: 4px 20px;
+}
+
+.add-api input [type=email] {
+    padding: 2px 40px;
+}
+
+.button-button1 {
+    background-color: darkgray;
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* MENU FORM*/
+
+.addexchange2 {
+    background: royalblue;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 6px 24px;
+    cursor: pointer;
+}
+
+.addexchange2:hover {
+    background: #ccc;
+}
+
+#window {
+    width: 40%;
+    height: 70%;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    z-index: 150;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.form {
+    width: 50%;
+    margin: -15px auto 20px auto;
+    text-align: center;
+    color: black;
+}
+
+
+.input123 {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.radio {
+    margin-bottom: 10px;
+
+}
+
+.close {
+    margin: 10px 0 0 320px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: #ccc;
+}
+
+.close:hover {
+
+    background-color: black;
+}
+
+#gray {
+    opacity: 1;
+    padding: 15px;
+    background-color: rgba(1, 1, 1, 0.75);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+
+/* Full-width input fields */
+/*input[type=text], input[type=password], input[type=email] {*/
+/*    width: 150%;*/
+/*    padding: 10px;*/
+/*    margin: 2px 0 10px 0;*/
+/*    display: inline-block;*/
+/*    font-family: Roboto, monospace;*/
+/*    font-size: 14px;*/
+/*    border: 1px;*/
+/*    color: black;*/
+/*    background: #cccccc;*/
+/*}*/
+
+.hr1 {
+    margin-top: 2%;
+    width: 80%;
+}
+
+.to312 {
+    margin-right: 20%;
+}
+
+.margin-flex {
+    display: flex;
+}
+
+.margin-block {
+    width: 100%;
+    display: block;
+}
+
+.user-info {
+    width: 85%;
+    height: 15vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 2%;
+    margin-left: 4%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.left-info {
+
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: block;
+
+}
+
+.right-info {
+    margin-left: 15%;
+    margin-top: 1%;
+    display: flex;
+}
+
+.user-name-info {
+    font-family: "Roboto Light", monospace;
+    font-size: 16px;
+    color: #ff4800;
+}
+
+.user-id-info {
+    margin-top: 10%;
+    font-family: "Roboto Light", monospace;
+    font-size: 12px;
+    color: black;
+}
+
+.hr-custom-002 {
+    margin-top: 18%;
+    margin-right: 10%;
+}
+
+#right-info {
+    margin-left: 10%;
+    margin-top: 1%;
+    display: flex;
+
+}
+
+.user-market-value {
+    font-family: "Roboto Light", monospace;
+    font-size: 11px;
+    color: black;
+    display: block;
+}
+
+.user-net-cost {
+    margin-left: 10%;
+    font-family: "Roboto Light", monospace;
+    font-size: 11px;
+    color: black;
+    display: block;
+}
+
+.user-all-time-profit {
+    margin-left: 10%;
+    font-family: "Roboto Light", monospace;
+    font-size: 11px;
+    color: black;
+    display: block;
+}
+
+.mv {
+
+    font-family: "Roboto Light", monospace;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+.nc {
+
+    font-family: "Roboto Light", monospace;
+    font-size: 18px;
+    color: black;
+}
+
+.ap {
+
+    font-family: "Roboto Light", monospace;
+    font-size: 18px;
+    color: black;
+}
+
+.exchange-block {
+    width: 45%;
+    height: 50vh;
+    position: relative;
+
+    margin-top: 2%;
+    margin-left: 4%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+}
+
+.exchange-table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    /*flex-direction: column;*/
+    /*width: 100%;*/
+}
+
+.exchange-table tr:hover {
+    background: #65994c; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+.headings3 {
+
+    text-align: center;
+    font-size: 12px;
+    font-family: "Roboto Light", monospace;
+}
+
+.headings-compound {
+
+    text-align: center;
+    font-size: 14px;
+    font-family: "Roboto Light", monospace;
+}
+
+.addexchange {
+    background: royalblue;
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    padding: 6px 24px;
+    cursor: pointer;
+
+}
+
+.addexchange:hover {
+    background: #ff4800;
+}
+
+.button-add-exchange {
+    margin-right: 2%;
+}
+
+.wallets-block {
+    width: 45%;
+    height: 50vh;
+    position: relative;
+
+    margin-top: 2%;
+    margin-left: 3%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+}
+
+.finance {
+    display: flex;
+}
+
+.button-add-wallet {
+    margin-right: 2%;
+}
+
+.addwallet {
+    background: royalblue;
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    padding: 6px 24px;
+    cursor: pointer;
+
+}
+
+.addwallet:hover {
+    background: #ff4800;
+}
+
+#click {
+    border: #343a40;
+    background: #5d656a;
+}
+
+.wallet-table {
+    margin-left: 1%;
+
+    margin-top: 3%;
+    /*flex-direction: column;*/
+    /*width: 100%;*/
+}
+
+.compound-admin-table {
+    margin-left: 1%;
+
+    margin-top: 6%;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wallet-table tr:hover {
+    background: #cccccc; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+.compound-admin-table tr:hover {
+    background: #cccccc; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+
+#form {
+    width: 80%;
+    height: 90%;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    z-index: 150;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#black {
+    opacity: 1;
+    padding: 15px;
+    background-color: rgba(1, 1, 1, 0.75);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+.new-page {
+    width: 60%;
+    height: 80vh;
+    position: relative;
+
+    margin-top: 2%;
+    margin-left: 3%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px
+}
+
+.new-finance {
+    display: flex;
+}
+
+.wallets-block-321123 {
+    width: 30%;
+    height: 80vh;
+    position: relative;
+
+    margin-top: 2%;
+    margin-left: 4%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+}
+
+.dynamic-type-wallet {
+    margin-left: 1%;
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+}
+
+.wallet-from-db {
+    margin-left: 1%;
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+}
+
+.balance-wallet {
+    margin-left: 5%;
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+}
+
+.value-wallet {
+    margin-left: 5%;
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+}
+
+.token-by-wallet {
+    margin-top: 10%;
+    margin-left: 5%;
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+    display: flex;
+}
+
+.tokens {
+    display: flex;
+}
+
+
+.user-info-ico {
+    width: 20%;
+    height: 12vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 70%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.left-info-ico {
+
+    width: 80%;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: block;
+
+}
+
+.user-name-info-moderator {
+    font-family: "Roboto Light", monospace;
+    font-size: 16px;
+    color: #ff4800;
+}
+
+.user-info-moderator {
+    width: 50%;
+    height: 12vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.left-info-moderator {
+
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: block;
+
+}
+
+.user-name-info-moderator {
+    font-family: "Roboto Light", monospace;
+    font-size: 16px;
+    color: #ff4800;
+}
+
+#addico {
+    opacity: 1;
+    padding: 15px;
+    background-color: rgba(1, 1, 1, 0.75);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 100;
+    overflow: auto;
+}
+
+#formico {
+    width: 85%;
+    height: 75%;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    z-index: 150;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.form34543534 {
+    width: 20%;
+    margin-left: 20%;
+    text-align: center;
+    color: black;
+}
+
+.input7zxc {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.user-name-info-ico {
+    font-family: "Roboto Light", monospace;
+    font-size: 16px;
+    color: #ff4800;
+}
+
+.header-tr {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.balance-info-main {
+    width: 70%;
+    height: 80vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 2%;
+    margin-left: 4%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.balance-left-info {
+
+    width: 100%;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: block;
+
+}
+
+.balance-user-name-info {
+    font-family: "Roboto Light", monospace;
+    font-size: 16px;
+    color: #ff4800;
+}
+
+.hr-custom-001 {
+    margin-top: 3%;
+    margin-right: 10%;
+}
+
+.withdrawal-block {
+    width: 85%;
+    height: 65vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 2%;
+    margin-left: 4%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.withdrawal-block-inside {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 10%;
+    margin-left: 4%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.user-name-info-rx {
+    margin-left: 3%;
+    margin-top: 3%;
+    font-family: "Roboto Light", monospace;
+    font-size: 16px;
+    color: #ff4800;
+}
+
+.left-info-withdrawal {
+    width: 80%;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: block;
+
+}
+
+.from {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 5%;
+    display: block;
+}
+
+.to {
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: block;
+}
+
+.hr-zxc-321 {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 60%;
+}
+
+.current-balance {
+    margin-top: 15%;
+    margin-left: 5%;
+    font-family: "Roboto Light", monospace;
+    font-size: 12px;
+    color: black;
+}
+
+.bla-bla {
+    margin-top: 15%;
+    margin-left: 5%;
+    width: 50%;
+    font-family: "Roboto Light", monospace;
+    font-size: 12px;
+    color: #ff4800;
+}

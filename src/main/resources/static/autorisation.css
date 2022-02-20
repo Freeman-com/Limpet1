@@ -1,0 +1,296 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Roboto, monospace;
+    background-image: url("download (1).jpg");
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header {
+    background-color: #343a40;
+}
+
+ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.menu {
+
+}
+
+.sidenav-vert {
+    flex-direction: column;
+    width: 200px;
+}
+
+li {
+    position: relative;
+}
+
+li:hover .sub-menu {
+    display: flex;
+}
+
+a {
+    display: block;
+    color: beige;
+    text-decoration: none;
+    background-color: #343a40;
+    padding: 1em;
+    white-space: nowrap;
+}
+
+a:hover {
+    background-color: orange;
+}
+
+a:focus {
+    outline: none;
+    background-color: orange;
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+}
+
+
+.topnav-right {
+    float: right;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: floralwhite;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: orange;
+    color: black;
+}
+
+
+.section-login {
+    padding-left: 40%;
+    padding-right: 45%;
+    padding-top: 10em;
+}
+
+.section-registration {
+    padding-left: 40%;
+    padding-right: 45%;
+    padding-top: 10em;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0 12px 0;
+    display: inline-block;
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    border: 1px;
+    background: darkslateblue;
+}
+
+/* Set a style for the submit button */
+.registration-btn {
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    background-color: #343a40;
+    color: red;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registration-btn:hover {
+    opacity: 1;
+}
+
+.index {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.products {
+    padding-left: 25%;
+    width: 100%;
+    height: 25vh;
+}
+
+.products h1 {
+    font-size: 45px;
+    font-family: Roboto, monospace;
+    color: white;
+}
+
+.products h3 {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto, monospace;
+    font-size: 25px;
+    color: white;
+    padding-left: 20%;
+}
+
+.component-1 {
+    display: block;
+}
+
+.t123 {
+    display: block;
+
+}
+
+.buttons {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding-left: 5%;
+}
+
+.button332 {
+    position: relative;
+    background-color: darkgray;
+    border: none;
+    color: white;
+    padding: 50px 120px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    margin: 4px 2px;
+}
+
+.button1 {
+    background-color: #343a40;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.button2 {
+    background-color: #343a40;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.section-add-api {
+    padding-left: 40%;
+    padding-right: 10%;
+    padding-top: 1%;
+
+    width: 20%;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    display: block;
+}
+
+
+.balance-table-1 {
+    padding-left: 35%;
+    padding-top: 2%;
+    width: 100%;
+    height: 50vh;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    display: flex;
+    color: white;
+    border-collapse: collapse;
+}
+
+.registration-btn2 {
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    background-color: #343a40;
+    color: red;
+    padding: 16px 20px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.row {
+
+}
+
+.col-25 {
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    color: white;
+}
+
+.col-75 {
+    margin-top: 1%;
+    font-family: Roboto, monospace;
+    font-size: 16px;
+    background-color: #343a40;
+    color: red;
+}
+
+.user-info {
+    width: 50%;
+    height: 12vh;
+    position: relative;
+
+    display: flex;
+
+    margin-top: 5%;
+    margin-left: 25%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid #343a40;
+    border-radius: 5px;
+
+}
+
+.left-info {
+
+    width: 90%;
+    margin-left: 23%;
+    margin-top: 1%;
+    display: block;
+
+}
+
+.user-name-info {
+    font-family: "Roboto Light", monospace;
+    font-size: 14px;
+    color: #ff4800;
+}
+
+.hr-custom-002 {
+    margin-top: 5%;
+}
