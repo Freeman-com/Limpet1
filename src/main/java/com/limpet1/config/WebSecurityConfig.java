@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers()
                 .frameOptions().disable().and()
                 .authorizeRequests()
-                .mvcMatchers("/", "/login", "/**/*.js", "/**/*.css", "/**/*.jpg")
+                .mvcMatchers("/", "/login1", "/**/*.js", "/**/*.css", "/**/*.jpg")
                 .permitAll()
 
                 .mvcMatchers("/myasset/**").hasAnyRole("ADMIN", "USER")
@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
 
                 .and().formLogin().permitAll()
-                .loginPage("/login")
+                .loginPage("/login1")
                 .loginProcessingUrl("/do-login")
                 .usernameParameter("email")               /*change default name: username (default in Spring Security)*/
                 .passwordParameter("password")

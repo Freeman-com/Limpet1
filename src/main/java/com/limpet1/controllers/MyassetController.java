@@ -40,10 +40,10 @@ public class MyassetController {
 
         var binanceList = binanceRepository.findByUsersId(xUser.getId());
 
-        for (var zxc : binanceList) {
+        for (var i : binanceList) {
 
-            columns.add(Map.of("Ticker", zxc.getBinance_email(), "Market Price", zxc.getBinance_email(), "Quantity",
-                    zxc.getBinance_email(), "NetCost", zxc.getBinance_email(), "Total", zxc.getBinance_email()));
+            columns.add(Map.of("Ticker", i.getBinance_email(), "Market Price", i.getBinance_email(), "Quantity",
+                    i.getBinance_email(), "NetCost", i.getBinance_email(), "Total", i.getBinance_email()));
         }
 
 
