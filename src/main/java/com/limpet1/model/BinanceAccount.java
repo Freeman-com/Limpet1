@@ -1,4 +1,4 @@
-package com.limpet1.model.exchangeEntity;
+package com.limpet1.model;
 
 import javax.persistence.*;
 import lombok.Data;
@@ -27,5 +27,8 @@ public class BinanceAccount implements Serializable {
 
     @Column(name = "binance_email")
     private String binance_email;
+
+    @Column (name = "exchange_email")
+    private String exchange_email;
 
 }

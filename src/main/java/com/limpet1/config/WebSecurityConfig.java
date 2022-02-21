@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/", "/login1", "/**/*.js", "/**/*.css", "/**/*.jpg")
                 .permitAll()
 
-                .mvcMatchers("/myasset/**").hasAnyRole("ADMIN", "USER")
+                .mvcMatchers("/main/**").hasAnyRole("ADMIN", "USER")
                 .and().authorizeRequests()
                 .anyRequest().authenticated()
 
@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/do-login")
                 .usernameParameter("email")               /*change default name: username (default in Spring Security)*/
                 .passwordParameter("password")
-                .defaultSuccessUrl("/myasset")              /*after authorisation to root ("/") page*/
+                .defaultSuccessUrl("/main")              /*after authorisation to root ("/") page*/
 
                 .and().logout().logoutUrl("/logout").permitAll()
                 .logoutSuccessUrl("/")

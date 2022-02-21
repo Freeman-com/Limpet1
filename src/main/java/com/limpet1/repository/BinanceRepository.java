@@ -1,6 +1,6 @@
 package com.limpet1.repository;
 
-import com.limpet1.model.exchangeEntity.BinanceAccount;
+import com.limpet1.model.BinanceAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
