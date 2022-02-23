@@ -1,0 +1,37 @@
+[
+  {
+    "code": 0,
+    "data": [
+      {
+        "asset": "USDC",
+        "totalBalance": "0.000017326",
+        "availableBalance": "0.000017326"
+      },
+      {
+        "asset": "USDT",
+        "totalBalance": "0.421447604",
+        "availableBalance": "0.421447604"
+      },
+      {
+        "asset": "BTC",
+        "totalBalance": "0.000000089",
+        "availableBalance": "0.000000089"
+      },
+      {
+        "asset": "ASD",
+        "totalBalance": "0.472710079",
+        "availableBalance": "0.472710079"
+      },
+      {
+        "asset": "USDP",
+        "totalBalance": "0.000013275",
+        "availableBalance": "0.000013275"
+      },
+      {
+        "asset": "ETH",
+        "totalBalance": "0.000000005",
+        "availableBalance": "0.000000005"
+      }
+    ]
+  }
+]

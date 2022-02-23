@@ -1,52 +1,77 @@
 package com.limpet1.controllers;
 
+import com.limpet1.marketPrice.CurrentPrice;
 import com.limpet1.model.XUser;
-import com.limpet1.repository.BinanceRepository;
+import com.limpet1.repository.AscendexRepository;
 import com.limpet1.repository.UserRepositoryJPA;
+import com.limpet1.rest.ascendex.AscendexRestControllerV3;
+import com.limpet1.rest.binance.BinanceRestControllerV2;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
 
 @Controller
 public class MainController {
 
     private static final String MAIN = "main";
     private final UserRepositoryJPA userRepositoryJPA;
-    private final BinanceRepository binanceRepository;
+    private final AscendexRepository ascendexRepository;
+    private final BinanceRestControllerV2 binanceRestControllerV2;
+    private final AscendexRestControllerV3 ascendexRestControllerV3;
+    public final CurrentPrice currentPrice;
 
-
-    public MainController(UserRepositoryJPA userRepositoryJPA, BinanceRepository binanceRepository) {
+    public MainController(UserRepositoryJPA userRepositoryJPA, AscendexRepository ascendexRepository,
+                          BinanceRestControllerV2 binanceRestControllerV2, AscendexRestControllerV3 ascendexRestControllerV3,
+                          CurrentPrice currentPrice) {
         this.userRepositoryJPA = userRepositoryJPA;
-        this.binanceRepository = binanceRepository;
+        this.ascendexRepository = ascendexRepository;
+        this.binanceRestControllerV2 = binanceRestControllerV2;
+        this.ascendexRestControllerV3 = ascendexRestControllerV3;
+        this.currentPrice = currentPrice;
     }
 
     @GetMapping("/main")
-    public String mainPage(Model model) {
+    public String mainPage(Model model) throws IOException, InterruptedException {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         XUser xUser = userRepositoryJPA.findByEmail(user.getUsername());
-
-
-        List<String> list = Arrays.asList("Ticker", "Market Price", "Quantity", "NetCost", "Total");
+        String email = xUser.getEmail();
+        List<String> list = Arrays.asList("Ticker", "Market Price", "Quantity", "NetCost", "Total in USD");
         List<Map<String, Object>> columns = new ArrayList<>();
 
+        /* ---  Exchange rates --- */
 
-        var binanceList = binanceRepository.findByUsersId(xUser.getId());
 
-        for (var i : binanceList) {
+        var keyList = ascendexRepository.findByUsersId(xUser.getId());
+        var a = binanceRestControllerV2.coinInfo1(email);
+        var b = ascendexRestControllerV3.accountInfo(email);
 
-            columns.add(Map.of("Ticker", i.getBinance_email(), "Market Price", i.getBinance_email(), "Quantity",
-                    i.getBinance_email(), "NetCost", i.getBinance_email(), "Total", i.getBinance_email()));
+
+        for (var i : a.entrySet()) {
+
+            try {
+                double x = currentPrice.averagePrice(i.getKey());
+
+
+                columns.add(Map.of("Ticker", i.getKey(), "Market Price", "$ 0.000", "Quantity",
+                        i.getValue() + "  " + i.getKey(), "NetCost", "0" + " $", "Total in USD",
+                        i.getValue() * x + " $"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
-
+        for (var i : b.entrySet()) {
+            double x = currentPrice.averagePrice(i.getKey());
+            columns.add(Map.of("Ticker", i.getKey(), "Market Price", "$ 0.000", "Quantity",
+                    i.getValue() + "  " + i.getKey(), "NetCost", "0" + " $", "Total in USD",
+                    i.getValue() * x + " $"));
+        }
         model.addAttribute("xUser", xUser);
         model.addAttribute("list", list);
         model.addAttribute("columns", columns);
