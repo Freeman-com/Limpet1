@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -17,10 +18,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomUserDetailsService userDetailsService;
 
-
     public WebSecurityConfig(CustomUserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
-
     }
 
     @Bean
@@ -33,10 +32,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers()
                 .frameOptions().disable().and()
                 .authorizeRequests()
-                .mvcMatchers("/", "/login1", "/**/*.js", "/**/*.css", "/**/*.jpg")
+                .mvcMatchers("/", "/login1", "/registration", "/**/*.js", "/**/*.css", "/**/*.jpg", "js", "css", "/**/*.png")
                 .permitAll()
 
                 .mvcMatchers("/main/**").hasAnyRole("ADMIN", "USER")
+                .mvcMatchers("/ico/**").hasAnyRole("ADMIN", "USER")
                 .and().authorizeRequests()
                 .anyRequest().authenticated()
 
@@ -46,6 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("email")               /*change default name: username (default in Spring Security)*/
                 .passwordParameter("password")
                 .defaultSuccessUrl("/main")              /*after authorisation to root ("/") page*/
+
 
                 .and().logout().logoutUrl("/logout").permitAll()
                 .logoutSuccessUrl("/")
@@ -57,6 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
 
     }
+
+
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {                   /*for authentication*/

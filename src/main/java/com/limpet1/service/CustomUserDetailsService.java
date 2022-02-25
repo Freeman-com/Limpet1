@@ -1,16 +1,22 @@
 package com.limpet1.service;
 
-
 import com.limpet1.model.XUser;
 import com.limpet1.repository.UserRepositoryJPA;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
-public class  CustomUserDetailsService implements UserDetailsService {
+@Slf4j
+public class CustomUserDetailsService implements UserDetailsService {
     private final UserRepositoryJPA userRepositoryJPA;
 
     public CustomUserDetailsService(UserRepositoryJPA userRepositoryJPA) {
@@ -33,6 +39,4 @@ public class  CustomUserDetailsService implements UserDetailsService {
                 .build();
         return user;
     }
-
-
 }

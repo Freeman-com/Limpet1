@@ -13,21 +13,24 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 @Controller
-public class MainController {
+public class ICOcryptoController {
 
-    private static final String MAIN = "main";
+    private static final String CRYPTO = "ico";
     private final UserRepositoryJPA userRepositoryJPA;
     private final AscendexRepository ascendexRepository;
     private final BinanceRestControllerV2 binanceRestControllerV2;
     private final AscendexRestControllerV3 ascendexRestControllerV3;
     public final CurrentPrice currentPrice;
 
-    public MainController(UserRepositoryJPA userRepositoryJPA, AscendexRepository ascendexRepository,
-                          BinanceRestControllerV2 binanceRestControllerV2, AscendexRestControllerV3 ascendexRestControllerV3,
-                          CurrentPrice currentPrice) {
+    public ICOcryptoController(UserRepositoryJPA userRepositoryJPA, AscendexRepository ascendexRepository,
+                               BinanceRestControllerV2 binanceRestControllerV2,
+                               AscendexRestControllerV3 ascendexRestControllerV3, CurrentPrice currentPrice) {
         this.userRepositoryJPA = userRepositoryJPA;
         this.ascendexRepository = ascendexRepository;
         this.binanceRestControllerV2 = binanceRestControllerV2;
@@ -35,55 +38,30 @@ public class MainController {
         this.currentPrice = currentPrice;
     }
 
-    @GetMapping("/main")
+    @GetMapping("/ico")
     public String mainPage(Model model) throws IOException, InterruptedException {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         XUser xUser = userRepositoryJPA.findByEmail(user.getUsername());
-        String email = xUser.getEmail();
-        List<String> list = Arrays.asList("Ticker", "Market Price", "Quantity", "NetCost", "Total in USD");
+        List<String> list = Arrays.asList("Name", "Rated", "Type");
         List<Map<String, Object>> columns = new ArrayList<>();
+        String email = xUser.getEmail();
 
-        /* ---  Exchange rates --- */
-
-
-        var keyList = ascendexRepository.findByUsersId(xUser.getId());
         var a = binanceRestControllerV2.coinInfo1(email);
-        var b = ascendexRestControllerV3.accountInfo(email);
 
-
-        Double value = null;
         for (var i : a.entrySet()) {
             double x = currentPrice.averagePriceImpl(i.getKey());
-            double total = i.getValue()*x;
+            double total = i.getValue() * x;
 
-            columns.add(Map.of("Ticker", i.getKey(), "Market Price", i.getValue() * x + " $", "Quantity",
-
-                    i.getValue() + "  " + i.getKey(), "NetCost", "0" + " $", "Total in USD",
-
-                    total + " $"));
-
-            value = total++;
+            columns.add(Map.of("Name", i.getKey(), "Rated", i.getValue() * x + " $", "Type", i.getValue()));
         }
 
-
-        for (var i : b.entrySet()) {
-            double x = currentPrice.averagePriceImpl(i.getKey());
-            double total = i.getValue()*x;
-
-            columns.add(Map.of("Ticker", i.getKey(), "Market Price", i.getValue() * x + " $", "Quantity",
-
-                    i.getValue() + "  " + i.getKey(), "NetCost", "0" + " $", "Total in USD",
-
-                    total + " $"));
-            value = total++;
-        }
-
-        model.addAttribute("value", value);
-        model.addAttribute("xUser", xUser);
+        Double value = 1250.001;
         model.addAttribute("list", list);
         model.addAttribute("columns", columns);
+        model.addAttribute("xUser", xUser);
+        model.addAttribute("value", value);
 
-        return MAIN;
+        return CRYPTO;
     }
 }

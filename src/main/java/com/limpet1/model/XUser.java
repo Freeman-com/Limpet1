@@ -4,16 +4,12 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
 @Data
-public class XUser implements Serializable {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+public class XUser extends BaseEntity {
 
     @Column(name = "name")
     private String name;
@@ -25,10 +21,4 @@ public class XUser implements Serializable {
 
     @Column(name = "role")
     private String role;
-    @Column(name = "status")
-    private String status;
-
-
-
-
 }

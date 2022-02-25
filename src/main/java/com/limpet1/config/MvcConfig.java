@@ -17,10 +17,14 @@ import javax.servlet.http.HttpServletResponse;
 public class MvcConfig implements WebMvcConfigurer {
 
     public void addViewControllers(ViewControllerRegistry registry) {
+
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/login1").setViewName("login1");
         registry.addViewController("/main").setViewName("main");
         registry.addViewController("/index-result").setViewName("index-result");
+        registry.addViewController("/ico").setViewName("ico");
+        registry.addViewController("/cryptoservices").setViewName("cryptoservices");
+
     }
 
     @GetMapping("/logout")

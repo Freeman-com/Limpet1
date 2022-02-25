@@ -44,7 +44,6 @@ public class BinanceRestControllerV2 {
             SpotClientImpl client = new SpotClientImpl(s.getPublic_key(), s.getSecret());
             String result = client.createWallet().accountSnapshot(parameters);
 
-
             list.add(result);
         }
         return String.valueOf(list);
