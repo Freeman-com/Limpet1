@@ -676,7 +676,7 @@ section {
 .au-input {
     line-height: 43px;
     border: 1px solid #e5e5e5;
-    font-size: 14px;
+    font-size: 12px;
     color: #666;
     padding: 0 17px;
     -webkit-border-radius: 3px;
@@ -5153,10 +5153,6 @@ section {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    -webkit-transition: opacity background .15s ease-out;
-    -o-transition: opacity background .15s ease-out;
-    -moz-transition: opacity background .15s ease-out;
-    transition: opacity background .15s ease-out;
 }
 
 .switch.switch-default .switch-input:checked ~ .switch-label::before {
@@ -5271,10 +5267,7 @@ section {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    -webkit-transition: opacity background .15s ease-out;
-    -o-transition: opacity background .15s ease-out;
-    -moz-transition: opacity background .15s ease-out;
-    transition: opacity background .15s ease-out;
+
 }
 
 .switch.switch-text .switch-label::before,
@@ -5417,10 +5410,7 @@ section {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    -webkit-transition: opacity background .15s ease-out;
-    -o-transition: opacity background .15s ease-out;
-    -moz-transition: opacity background .15s ease-out;
-    transition: opacity background .15s ease-out;
+
 }
 
 .switch.switch-icon .switch-label::before,
@@ -5562,10 +5552,7 @@ section {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    -webkit-transition: opacity background .15s ease-out;
-    -o-transition: opacity background .15s ease-out;
-    -moz-transition: opacity background .15s ease-out;
-    transition: opacity background .15s ease-out;
+
 }
 
 .switch.switch-3d .switch-input:checked ~ .switch-label::before {

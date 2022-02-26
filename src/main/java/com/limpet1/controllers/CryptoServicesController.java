@@ -10,7 +10,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ import java.util.Map;
 public class CryptoServicesController {
 
     private static final String CRYPTO = "cryptoservices";
+    private static final String TRANSACTION = "transaction";
     private final UserRepositoryJPA userRepositoryJPA;
     private final BinanceRestControllerV2 binanceRestControllerV2;
     public final CurrentPrice currentPrice;
@@ -59,5 +62,16 @@ public class CryptoServicesController {
         model.addAttribute("value", value);
 
         return CRYPTO;
+    }
+
+    @PostMapping("/create-transaction")
+    public String createTransaction(Model model) {
+
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        XUser xUser = userRepositoryJPA.findByEmail(user.getUsername());
+
+
+        model.addAttribute("xUser", xUser);
+        return TRANSACTION;
     }
 }

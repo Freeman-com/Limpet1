@@ -126,7 +126,7 @@
                         <!-- FIRST TABLE -->
                         <div class="row">
                             <div class="col-lg-9">
-                                <!--                                <h2 class="title-1 m-b-25">All Currencies</h2>-->
+                                <h2 class="title-1 m-b-25">Crypto services Page</h2>
                                 <div class="table-responsive table--no-card m-b-30">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
@@ -147,23 +147,36 @@
                             <!-- END FIRST TABLE   -->
                             <!-- Main Exchanges -->
                             <div class="col-lg-3">
-                                <!--                                <h2 class="title-1 m-b-25">Main Exchanges</h2>-->
+                                <h4 class="title-1 m-b-25">Create transaction</h4>
                                 <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
                                     <div class="au-card-inner">
                                         <div class="table-responsive">
-                                            <table class="table table-top-countries">
-                                                <tbody>
-                                                <tr>
-                                                    <td>Binance</td>
-                                                    <td class="text-right">$119,366.96</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ascendex</td>
-                                                    <td class="text-right">$70,261.65</td>
-                                                </tr>
-
-                                                </tbody>
-                                            </table>
+                                            <form th:method="POST" th:action="@{/create-transaction}">
+                                                <table class="table table-top-countries">
+                                                    <tbody>
+                                                    <tr>
+                                                        <label>Input ticker</label>
+                                                        <td>
+                                                            <input class="au-input au-input--full" name="currency"
+                                                                   placeholder="ETH" type="text">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <label>Input to address</label>
+                                                        <td class="text-right">
+                                                            <input class="au-input au-input--full" name="currency"
+                                                                   placeholder="0xCF1E58Cc016E993ea2CF2Cc52DBb3aD657C114E4"
+                                                                   type="text">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button type="submit">transaction</button>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -171,55 +184,10 @@
                         </div>
                         <!-- End Main Exchanges -->
                         <!-- SECOND TABLE -->
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <h2 class="title-1 m-b-25">Services connected</h2>
-                                <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                        <tr>
-                                            <th>Service Name</th>
-                                            <th>Main Email</th>
-                                            <th>Balance</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Payoneer</td>
-                                            <td>5244934@gmail.com</td>
-                                            <td>$ 502.25</td>
-                                            <td class="text-right">$ 502.25</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- END MAIN TABLE   -->
-                            <!-- Main Exchanges -->
-                            <div class="col-lg-3">
-                                <h2 class="title-1 m-b-25">Payment Services</h2>
-                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
-                                    <div class="au-card-inner">
-                                        <div class="table-responsive">
-                                            <table class="table table-top-countries">
-                                                <tbody>
-                                                <tr>
-                                                    <td>Payoneer</td>
-                                                    <td class="text-right">$ 550.50</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>PayPal</td>
-                                                    <td class="text-right">$ 2470.10</td>
-                                                </tr>
 
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- END SECOND TABLE   -->
+                        <!-- Main Exchanges -->
+
                     </div>
                     <!-- End Main Exchanges -->
                     <div class="row">
