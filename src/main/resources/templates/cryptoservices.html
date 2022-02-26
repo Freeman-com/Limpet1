@@ -1,10 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <head>
+    <!-- Required meta tags-->
     <meta charset="UTF-8">
-    <title>cryptoservices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Anthony Kozinau">
+    <!-- Title Page-->
+    <title th:text="${xUser.name}"></title>
+
+    <!-- Font-faces CSS-->
+    <link href="../static/font-face.css" th:href="font-face.css" rel="stylesheet" media="all">
+
+    <link href="../static/font-awesome.min.css" th:href="font-awesome.min.css" rel="stylesheet" media="all">
+
+    <link href="../static/fontawesome-all.min.css" th:href="fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../static/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="../static/bootstrap.min.css" th:href="bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../static/theme.css" rel="stylesheet" media="all" th:href="theme.css">
+
+    <link rel="stylesheet" href="../static/main1.css">
+    <link rel="stylesheet" th:href="main1.css">
 </head>
-<body>
-<h2>cryptoservises</h2>
+
+<body class="animsition">
+<div class="page-wrapper">
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar2">
+        <div class="logo">
+            <a href="#">
+                <img src="../static/logo-white.png" th:src="logo-white.png" alt="Cool Admin"/>
+            </a>
+        </div>
+        <div class="menu-sidebar2__content js-scrollbar1">
+            <div class="account2">
+                <div class="image img-cir img-120">
+                    <img src="../static/avatar-big-01.jpg" th:src="avatar-big-01.jpg" alt="John Doe"/>
+                </div>
+                <h4 class="name" th:text="${xUser.name}"></h4>
+                <a th:href="@{/logout}">Sign out</a>
+            </div>
+            <nav class="navbar-sidebar2">
+                <ul class="list-unstyled navbar__list">
+                    <li class="active has-sub">
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        </ul>
+                    </li>
+                    <li>
+                        <a th:href="@{/main}">
+                            <i></i>HOME</a>
+                    </li>
+                    <li>
+                        <a>
+                            <i></i>+ ADD Real Estate</a>
+                    </li>
+                    <li>
+                        <a th:href="@{/cryptoservices}">
+                            <i></i>+ ADD Crypto Services</a>
+                    </li>
+                    <li class="has-sub">
+                        <a>
+                            <i></i>+ ADD Stock Market</a>
+                    </li>
+                    <li class="has-sub">
+                        <a th:href="@{/ico}">
+                            <i></i>IPO | ICO</a>
+                    </li>
+                    <li class="has-sub">
+                        <a>
+                            <i></i>Anything</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <!-- END MENU SIDEBAR -->
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        <!-- SEARCH FORM -->
+                        <form class="form-header" action="" method="POST">
+                            <input class="au-input au-input--xl" type="text" name="search"
+                                   placeholder="Search for datas &amp; reports..."/>
+                            <button class="au-btn--submit" type="submit">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </form>
+                        <!-- END SEARCH FORM -->
+                        <!-- MENU FORM -->
+                        <li class="t123">
+                            <a class="settings1"><span th:text="${xUser.getName()}"></span></a>
+                            <ul class="sub-menu">
+                                <li style="float: left"><a href="#">Account</a></li>
+                                <li style="float: left"><a href="#">My Asset</a></li>
+                                <li style="float: left"><a href="#">My Orders</a></li>
+                                <li style="float: left"><a href="#">Withdrawal</a></li>
+                                <li style="float: right"><a class="active1" th:href="@{/addapipage}">Add API</a></li>
+                                <li style="float: right"><a class="active1" th:href="@{/logout}">LogOut</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER DESKTOP-->
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <!-- BANNER SERVICES -->
+
+                    <!-- END BANNER SERVICES -->
+                    <!-- END STATISTIC-->
+                    <div class="section__content section__content--p30">
+                        <!-- FIRST TABLE -->
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <!--                                <h2 class="title-1 m-b-25">All Currencies</h2>-->
+                                <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                        <tr>
+                                            <th th:each="list32: ${list}" class="column-title"
+                                                th:text="${list32}"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr onclick="show('block')" class="headings3" th:each="column: ${columns}"
+                                            id="table">
+                                            <td th:each="list: ${list}" th:text="${column.get(list)}"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- END FIRST TABLE   -->
+                            <!-- Main Exchanges -->
+                            <div class="col-lg-3">
+                                <!--                                <h2 class="title-1 m-b-25">Main Exchanges</h2>-->
+                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
+                                    <div class="au-card-inner">
+                                        <div class="table-responsive">
+                                            <table class="table table-top-countries">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Binance</td>
+                                                    <td class="text-right">$119,366.96</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ascendex</td>
+                                                    <td class="text-right">$70,261.65</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Main Exchanges -->
+                        <!-- SECOND TABLE -->
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h2 class="title-1 m-b-25">Services connected</h2>
+                                <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                        <tr>
+                                            <th>Service Name</th>
+                                            <th>Main Email</th>
+                                            <th>Balance</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Payoneer</td>
+                                            <td>5244934@gmail.com</td>
+                                            <td>$ 502.25</td>
+                                            <td class="text-right">$ 502.25</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- END MAIN TABLE   -->
+                            <!-- Main Exchanges -->
+                            <div class="col-lg-3">
+                                <h2 class="title-1 m-b-25">Payment Services</h2>
+                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
+                                    <div class="au-card-inner">
+                                        <div class="table-responsive">
+                                            <table class="table table-top-countries">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Payoneer</td>
+                                                    <td class="text-right">$ 550.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PayPal</td>
+                                                    <td class="text-right">$ 2470.10</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Main Exchanges -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2022 LIMPET. All rights reserved. GitHud project <a
+                                        href="https://github.com/Freeman-com/Limpet1.git">Link</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END PAGE CONTAINER-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -23556,3 +23556,617 @@ Security filter chain: [
 ************************************************************
 
 
+2022-02-26 03:23:09.687[1645834989687] | INFO  | http-nio-8080-exec-3 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/ico':
+
+org.apache.catalina.connector.RequestFacade@a7e0160
+
+servletPath:/ico
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Linux"
+upgrade-insecure-requests: 1
+dnt: 1
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/main
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:09.694[1645834989694] | INFO  | http-nio-8080-exec-3 | c.b.c.client.utils.RequestHandler    - GET https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1645834989694&signature=73dd4d7c2a8d691d27bc82a84ef939f2e1304e36f43a43e87311613d9f1fdaf0
+2022-02-26 03:23:11.212[1645834991212] | INFO  | http-nio-8080-exec-9 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/font-face.css':
+
+org.apache.catalina.connector.RequestFacade@a7e0160
+
+servletPath:/font-face.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.216[1645834991216] | INFO  | http-nio-8080-exec-1 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/font-awesome.min.css':
+
+org.apache.catalina.connector.RequestFacade@3b43031f
+
+servletPath:/font-awesome.min.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.217[1645834991217] | INFO  | http-nio-8080-exec-7 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/static/material-design-iconic-font.min.css':
+
+org.apache.catalina.connector.RequestFacade@632bfd89
+
+servletPath:/static/material-design-iconic-font.min.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.219[1645834991219] | INFO  | http-nio-8080-exec-8 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/theme.css':
+
+org.apache.catalina.connector.RequestFacade@20b8be1f
+
+servletPath:/theme.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.222[1645834991222] | INFO  | http-nio-8080-exec-4 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/fontawesome-all.min.css':
+
+org.apache.catalina.connector.RequestFacade@17db77ac
+
+servletPath:/fontawesome-all.min.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.223[1645834991223] | INFO  | http-nio-8080-exec-5 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/bootstrap.min.css':
+
+org.apache.catalina.connector.RequestFacade@5d8e708d
+
+servletPath:/bootstrap.min.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.231[1645834991231] | INFO  | http-nio-8080-exec-7 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@4bc0938
+
+servletPath:/error
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.236[1645834991236] | INFO  | http-nio-8080-exec-9 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/main1.css':
+
+org.apache.catalina.connector.RequestFacade@a7e0160
+
+servletPath:/main1.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.239[1645834991239] | INFO  | http-nio-8080-exec-2 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/static/main1.css':
+
+org.apache.catalina.connector.RequestFacade@5d8e708d
+
+servletPath:/static/main1.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.242[1645834991242] | INFO  | http-nio-8080-exec-2 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@73a4aced
+
+servletPath:/error
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.286[1645834991286] | INFO  | http-nio-8080-exec-6 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/avatar-big-01.jpg':
+
+org.apache.catalina.connector.RequestFacade@a7e0160
+
+servletPath:/avatar-big-01.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-02-26 03:23:11.286[1645834991286] | INFO  | http-nio-8080-exec-10 | Spring Security Debugger             - 
+
+************************************************************
+
+Request received for GET '/logo-white.png':
+
+org.apache.catalina.connector.RequestFacade@5d8e708d
+
+servletPath:/logo-white.png
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+sec-ch-ua-platform: "Linux"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:8080/ico
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7
+cookie: Idea-140e1067=4e71943e-ef59-4d87-a191-81764d296c5e; SESSION=NWQxYTU5YjgtY2E2NC00NzFmLWJkYmMtYjhiZjgzYWE3ZmEw; JSESSIONID=3CAD827545EE490555B09F0BA1392C79
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  ConcurrentSessionFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
