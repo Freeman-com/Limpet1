@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<div class="page-wrapper" th:fragment="my-fragment1">
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <a th:href="@{/main}">
+                <img src="images/icon/logo.png" alt="Cool Admin"/>
+            </a>
+        </div>
+        <div class="menu-sidebar2__content js-scrollbar1">
+            <div class="account2">
+                <div class="image img-cir img-120">
+                    <img src="images/icon/avatar-big-01.jpg" alt="John Doe"/>
+                    alt="John Doe"/>
+                </div>
+                <h4 class="name" th:text="${xUser.name}"></h4>
+                <a th:href="@{/logout}">Sign out</a>
+            </div>
+            <nav class="navbar-sidebar2">
+                <ul class="list-unstyled navbar__list">
+                    <li class="active has-sub">
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        </ul>
+                    </li>
+
+                    <!-- Dashboard -->
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-institution"></i>Dashboard</a>
+                    </li>
+
+                    <!-- END Dashboard -->
+                    <!-- Markets -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Markets</a>
+                    </li>
+
+                    <!-- END Markets -->
+                    <!-- Activity -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Activity (tested)</a>
+                    </li>
+
+                    <!-- END Activity -->
+                    <!-- Linked accounts -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/linked-accounts}">
+                            <i class="fa fa-envelope"></i>Linked accounts</a>
+                    </li>
+
+                    <!-- END Linked accounts -->
+                    <!-- Profile -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/profile}">
+                            <i class="fa fa-user"></i>Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <!-- END MENU SIDEBAR -->
+</div>
+</html>

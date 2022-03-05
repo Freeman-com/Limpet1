@@ -3,8 +3,6 @@ package com.limpet1.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -21,4 +19,14 @@ public class XUser extends BaseEntity {
 
     @Column(name = "role")
     private String role;
+
+    @Column(name = "date_of_birth")
+    private String date_of_birth;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "verification")
+    private String verification;
+
 }

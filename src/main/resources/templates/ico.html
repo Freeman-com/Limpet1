@@ -34,7 +34,7 @@
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar2">
         <div class="logo">
-            <a href="#">
+            <a th:href="@{/main}">
                 <img src="../static/logo-white.png" th:src="logo-white.png" alt="Cool Admin"/>
             </a>
         </div>
@@ -52,29 +52,33 @@
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                         </ul>
                     </li>
-                    <li>
-                        <a th:href="@{/main}">
-                            <i></i>HOME</a>
-                    </li>
-                    <li>
-                        <a>
-                            <i></i>+ ADD Real Estate</a>
-                    </li>
-                    <li>
+                    <li class="has-sub">
                         <a th:href="@{/cryptoservices}">
-                            <i></i>+ ADD Crypto Services</a>
+                            <div class="au-btn au-btn-icon au-btn--blue">
+                                <i>Requisites | Crypto</i>
+                            </div>
+                        </a>
                     </li>
                     <li class="has-sub">
-                        <a>
-                            <i></i>+ ADD Stock Market</a>
+                        <a th:href="@{/cryptoservices}">
+                            <div class="au-btn au-btn-icon au-btn--blue">
+                                <i>Requisites | Real Estate</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="has-sub">
+                        <a th:href="@{/cryptoservices}">
+                            <div class="au-btn au-btn-icon au-btn--blue">
+                                <i>Requisites | Stock</i>
+                            </div>
+                        </a>
                     </li>
                     <li class="has-sub">
                         <a th:href="@{/ico}">
-                            <i></i>IPO | ICO</a>
-                    </li>
-                    <li class="has-sub">
-                        <a>
-                            <i></i>Anything</a>
+                            <div class="au-btn au-btn-icon au-btn--blue">
+                                <i>Requisites | IPO | ICO</i>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </nav>

@@ -84,7 +84,7 @@ public class BinanceRestControllerV2 {
                     .filter(modelX -> {
                         String coin = modelX.getCoin();
                         double free = modelX.getFree();
-                        if (free > 0.001 && !Objects.equals(coin, "0.001")) {
+                        if (free > 0.0000001 && !Objects.equals(coin, "0.0000001")) {
                             return true;
                         } else {
                             return false;

@@ -41,7 +41,7 @@ public class MainController {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         XUser xUser = userRepositoryJPA.findByEmail(user.getUsername());
         String email = xUser.getEmail();
-        List<String> list = Arrays.asList("Ticker", "Market Price", "Quantity", "NetCost", "Total in USD");
+        List<String> list = Arrays.asList("Ticker", "Market Price", "Quantity", "Total in USD");
         List<Map<String, Object>> columns = new ArrayList<>();
 
         /* ---  Exchange rates --- */
@@ -55,13 +55,11 @@ public class MainController {
         Double value = null;
         for (var i : a.entrySet()) {
             double x = currentPrice.averagePriceImpl(i.getKey());
-            double total = i.getValue()*x;
+            double total = i.getValue() * x;
 
             columns.add(Map.of("Ticker", i.getKey(), "Market Price", i.getValue() * x + " $", "Quantity",
 
-                    i.getValue() + "  " + i.getKey(), "NetCost", "0" + " $", "Total in USD",
-
-                    total + " $"));
+                    i.getValue() + "  " + i.getKey(), "Total in USD", total + " $"));
 
             value = total++;
         }
@@ -69,14 +67,13 @@ public class MainController {
 
         for (var i : b.entrySet()) {
             double x = currentPrice.averagePriceImpl(i.getKey());
-            double total = i.getValue()*x;
+            double total = i.getValue() * x;
 
             columns.add(Map.of("Ticker", i.getKey(), "Market Price", i.getValue() * x + " $", "Quantity",
 
-                    i.getValue() + "  " + i.getKey(), "NetCost", "0" + " $", "Total in USD",
+                    i.getValue() + "  " + i.getKey(), "Total in USD", total + " $"));
 
-                    total + " $"));
-            value = total++;
+            value = 150234.55;
         }
 
         model.addAttribute("value", value);

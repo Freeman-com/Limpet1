@@ -1,3 +1,9 @@
+body {
+
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 header li {
     position: relative;
 }

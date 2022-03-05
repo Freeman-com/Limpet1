@@ -29,4 +29,7 @@ public class AscendexAccount implements Serializable {
 
     @Column(name = "email")
     public String email;
+
+    @Column(name = "account_name")
+    public String account_name;
 }

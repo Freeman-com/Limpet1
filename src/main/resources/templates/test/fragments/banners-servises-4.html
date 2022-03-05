@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<!-- BANNER SERVICES -->
+<div class="row m-t-25" th:fragment="banners-fragments-main-test">
+
+    <!-- 1-T BANNER -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c1">
+            <div class="overview__inner">
+                <a th:href="@{/cryptoservices}">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-account-o"></i>
+                        </div>
+                        <div class="text">
+                            <h2 th:text="'$ ' + ${value}">10368</h2>
+                            <span>Crypto Services</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="overview-chart">
+                    <canvas id="widgetChart1"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END 1-T BANNER -->
+
+    <!-- 2-D BANNER -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c2">
+            <div class="overview__inner">
+                <a th:href="@{/ico}">
+                    <div class="overview-box clearfix">
+                        <div class="icon">
+                            <i class="zmdi zmdi-shopping-cart"></i>
+                        </div>
+                        <div class="text">
+                            <h2>$ 0, 000.00</h2>
+                            <span>Stock Services</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="overview-chart">
+                    <canvas id="widgetChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END 2-D BANNER -->
+
+    <!-- 3-TH BANNER -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c3">
+            <div class="overview__inner">
+                <div class="overview-box clearfix">
+                    <div class="icon">
+                        <i class="zmdi zmdi-calendar-note"></i>
+                    </div>
+                    <div class="text">
+                        <h2>1,086</h2>
+                        <span>this week</span>
+                    </div>
+                </div>
+                <div class="overview-chart">
+                    <canvas id="widgetChart3"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END 3-TH BANNER -->
+
+    <!-- 4-TH BANNER -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c4">
+            <div class="overview__inner">
+                <div class="overview-box clearfix">
+                    <div class="icon">
+                        <i class="zmdi zmdi-money"></i>
+                    </div>
+                    <div class="text">
+                        <h2>$1,060,386</h2>
+                        <span>total earnings</span>
+                    </div>
+                </div>
+                <div class="overview-chart">
+                    <canvas id="widgetChart4"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END 4-TH BANNER -->
+</div>
+<!-- END BANNER SERVICES -->
+</body>
+</html>

@@ -55,7 +55,7 @@ public class AscendexRestControllerV3 {
                     .filter(data -> {
                         double totalBalance = Double.parseDouble(data.getTotalBalance());
                         boolean balanceCheck = false;
-                        if (totalBalance > 0.001) {
+                        if (totalBalance > 0.0000001) {
                             balanceCheck = true;
                         }
                         return balanceCheck;

@@ -5,7 +5,7 @@ body {
     height: 100%;
     overflow-x: hidden;
     font-family: Roboto, monospace;
-    background-image: url("download (1).jpg");
+    background-image: url("photo321.jpg");
     background-attachment: scroll;
     background-size: cover;
 }
@@ -137,10 +137,14 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 .products {
-    padding-top: 10%;
+    padding-top: 2%;
     padding-left: 28%;
     width: 100%;
     height: 25vh;
+}
+
+.p234 {
+    padding-left: 28%;
 }
 
 .products h1 {
@@ -259,11 +263,11 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 .user-info {
-    width: 100%;
+    width: 25%;
     position: relative;
     display: flex;
-    margin-top: 5%;
-    margin-left: 0%;
+    margin-top: 0%;
+    margin-left: 33%;
     overflow-x: hidden; /* Disable horizontal scroll */
     background: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -273,7 +277,7 @@ input[type=text], input[type=password], input[type=email] {
 
 .left-info {
     width: 90%;
-    margin-left: 23%;
+    margin-left: 18%;
     margin-top: 1%;
     display: block;
 }

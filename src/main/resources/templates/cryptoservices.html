@@ -9,7 +9,7 @@
     <meta name="description" content="au theme template">
     <meta name="author" content="Anthony Kozinau">
     <!-- Title Page-->
-    <title th:text="${xUser.name}"></title>
+    <title>Crypto</title>
 
     <!-- Font-faces CSS-->
     <link href="../static/font-face.css" th:href="font-face.css" rel="stylesheet" media="all">
@@ -24,12 +24,63 @@
 
     <!-- Main CSS-->
     <link href="../static/theme.css" rel="stylesheet" media="all" th:href="theme.css">
+    <link href="../static/material-design-iconic-font.min.css" rel="stylesheet" media="all" th:href="material-design-iconic-font.min.css">
 
     <link rel="stylesheet" href="../static/main1.css">
     <link rel="stylesheet" th:href="main1.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" th:href="transaction.css">
+
+
+    <!-- Font-faces CSS-->
+    <link th:href="@{/static/css/font-face.css}">
+    <link th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}">
+    <link th:href="@{/vendor/font-awesome-5/css/fontawesome-all.min.css}">
+    <link th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}">
+
+    <!-- Bootstrap CSS-->
+    <link th:href="@{/vendor/bootstrap-4.1/bootstrap.min.css}">
+
+    <!-- Vendor CSS-->
+    <!--    <link href="../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">-->
+    <!--    <link rel="stylesheet" th:href="@{/vendor/animsition/animsition.min.css}">-->
+
+    <link th:href="@{/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css}">
+    <link th:href="@{/vendor/wow/animate.css}">
+    <link th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+    <link th:href="@{/vendor/slick/slick.css}">
+    <link th:href="@{/vendor/select2/select2.min.css}">
+    <link th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}">
+
+    <!-- Main CSS-->
+    <link th:href="@{/css/theme.css}">
+
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
 </head>
 
 <body class="animsition">
@@ -37,7 +88,7 @@
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar2">
         <div class="logo">
-            <a href="#">
+            <a th:href="@{/main}">
                 <img src="../static/logo-white.png" th:src="logo-white.png" alt="Cool Admin"/>
             </a>
         </div>
@@ -55,30 +106,78 @@
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                         </ul>
                     </li>
-                    <li>
-                        <a th:href="@{/main}">
-                            <i></i>HOME</a>
-                    </li>
-                    <li>
-                        <a>
-                            <i></i>+ ADD Real Estate</a>
-                    </li>
-                    <li>
-                        <a th:href="@{/cryptoservices}">
-                            <i></i>+ ADD Crypto Services</a>
-                    </li>
+
+                    <!-- Portfolio -->
                     <li class="has-sub">
-                        <a>
-                            <i></i>+ ADD Stock Market</a>
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-institution"></i>Portfolio</a>
                     </li>
+
+                    <!-- END Portfolio -->
+                    <!-- Markets -->
+
                     <li class="has-sub">
-                        <a th:href="@{/ico}">
-                            <i></i>IPO | ICO</a>
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Markets</a>
                     </li>
+
+                    <!-- END Markets -->
+                    <!-- Activity -->
+
                     <li class="has-sub">
-                        <a>
-                            <i></i>Anything</a>
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Activity (tested)</a>
                     </li>
+
+                    <!-- END Activity -->
+                    <!-- Linked accounts -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/linked-accounts}">
+                            <i class="fa fa-envelope"></i>Linked accounts</a>
+                    </li>
+
+                    <!-- END Linked accounts -->
+                    <!-- Profile -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/profile}">
+                            <i class="fa fa-user"></i>Profile</a>
+                    </li>
+
+                    <!-- END Profile -->
+
+                    <!-- BUTTONS -->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/cryptoservices}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | Crypto</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/cryptoservices}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | Real Estate</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/cryptoservices}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | Stock</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/ico}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | IPO | ICO</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!-- END BUTTONS -->
+
                 </ul>
             </nav>
         </div>
@@ -207,7 +306,180 @@
                     </div>
                     <!-- End Main Exchanges -->
                     <!-- SECOND TABLE -->
-
+                    <!-- DATA TABLE -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="title-5 m-b-35">crypto requisites</h3>
+                            <div class="table-data__tool">
+                                <div class="table-data__tool-left">
+                                    <div class="rs-select2--light rs-select2--md">
+                                        <select class="js-select2" name="property">
+                                            <option selected="selected">All Properties</option>
+                                            <option value="">Option 1</option>
+                                            <option value="">Option 2</option>
+                                        </select>
+                                        <div class="dropDownSelect2"></div>
+                                    </div>
+                                    <div class="rs-select2--light rs-select2--sm">
+                                        <select class="js-select2" name="time">
+                                            <option selected="selected">Today</option>
+                                            <option value="">3 Days</option>
+                                            <option value="">1 Week</option>
+                                        </select>
+                                        <div class="dropDownSelect2"></div>
+                                    </div>
+                                    <button class="au-btn-filter">
+                                        <i class="zmdi zmdi-filter-list"></i>filters
+                                    </button>
+                                </div>
+                                <div class="table-data__tool-right">
+                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                        <i class="zmdi zmdi-plus"></i>add item
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="table-responsive table-responsive-data2">
+                                <table class="table table-data2">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="au-checkbox">
+                                                <input type="checkbox">
+                                                <span class="au-checkmark"></span>
+                                            </label>
+                                        </th>
+                                        <th>name</th>
+                                        <th>email</th>
+                                        <th>description</th>
+                                        <th>expiration</th>
+                                        <th>status</th>
+                                        <th>balance</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                            <label class="au-checkbox">
+                                                <input type="checkbox">
+                                                <span class="au-checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>Binance</td>
+                                        <td>
+                                            <span class="block-email">celer.binance@yandex.ru</span>
+                                        </td>
+                                        <td class="desc">Main</td>
+                                        <td>90 days exp.time API keys</td>
+                                        <td>
+                                            <span class="status--process">Active</span>
+                                        </td>
+                                        <td>$679.00</td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Send">
+                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Edit">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Delete">
+                                                    <i class="zmdi zmdi-delete"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="More">
+                                                    <i class="zmdi zmdi-more"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="spacer"></tr>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                            <label class="au-checkbox">
+                                                <input type="checkbox">
+                                                <span class="au-checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>Ascendex</td>
+                                        <td>
+                                            <span class="block-email">celer.binance@yandex.ru</span>
+                                        </td>
+                                        <td class="desc">Main</td>
+                                        <td>90 days exp.time API keys</td>
+                                        <td>
+                                            <span class="status--process">Active</span>
+                                        </td>
+                                        <td>$679.00</td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Send">
+                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Edit">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Delete">
+                                                    <i class="zmdi zmdi-delete"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="More">
+                                                    <i class="zmdi zmdi-more"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="spacer"></tr>
+                                    <tr class="tr-shadow">
+                                        <td>
+                                            <label class="au-checkbox">
+                                                <input type="checkbox">
+                                                <span class="au-checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>Kraken</td>
+                                        <td>
+                                            <span class="block-email">kraken.binance@yandex.ru</span>
+                                        </td>
+                                        <td class="desc">Main</td>
+                                        <td>90 days exp.time API keys</td>
+                                        <td>
+                                            <span class="status--process">Active</span>
+                                        </td>
+                                        <td>$679.00</td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Send">
+                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Edit">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Delete">
+                                                    <i class="zmdi zmdi-delete"></i>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="More">
+                                                    <i class="zmdi zmdi-more"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END DATA TABLE -->
                     <!-- END SECOND TABLE   -->
                     <!-- Main Exchanges -->
 
@@ -227,5 +499,55 @@
     </div>
 </div>
 </div>
+
+<!-- Jquery JS-->
+
+<script type="text/javascript" th:src="@{/static/vendor/jquery-3.2.1.min.js}"></script>
+<!-- Bootstrap JS-->
+
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-4.1/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-4.1/bootstrap.min.js}"></script>
+<!-- Vendor JS       -->
+
+<script type="text/javascript" th:src="@{/static/vendor/slick/slick.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/wow/wow.min.js}"></script>
+<script src="../static/vendor/animsition/animsition.min.js"></script>
+<script type="text/javascript" th:src="@{/static/js/main.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/counter-up/jquery.waypoints.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/counter-up/jquery.counterup.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/circle-progress/circle-progress.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/perfect-scrollbar/perfect-scrollbar.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/chartjs/Chart.bundle.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/select2/select2.min.js}"></script>
+
+<!-- Main JS-->
+<script type="text/javascript" th:src="@{/static/js/main.js}"></script>
+
+<!-- Jquery JS-->
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="vendor/slick/slick.min.js">
+</script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/animsition/animsition.min.js"></script>
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="vendor/circle-progress/circle-progress.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="js/main.js"></script>
+
+
 </body>
 </html>

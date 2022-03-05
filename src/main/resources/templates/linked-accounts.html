@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Anthony Kozinau">
+    <!-- Title Page-->
+    <title th:text="${xUser.name}"></title>
+
+    <!-- Font-faces CSS-->
+    <link href="../static/font-face.css" th:href="font-face.css" rel="stylesheet" media="all">
+
+    <link href="../static/font-awesome.min.css" th:href="font-awesome.min.css" rel="stylesheet" media="all">
+
+    <link href="../static/fontawesome-all.min.css" th:href="fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../static/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="../static/bootstrap.min.css" th:href="bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../static/theme.css" rel="stylesheet" media="all" th:href="theme.css">
+
+    <link rel="stylesheet" href="../static/main1.css">
+    <link rel="stylesheet" th:href="main1.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="transaction.css">
+
+    <!-- Required meta tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Anthony Kozinau">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Font-faces CSS-->
+    <link th:href="@{/static/css/font-face.css}">
+    <link th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}">
+    <link th:href="@{/vendor/font-awesome-5/css/fontawesome-all.min.css}">
+    <link th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}">
+
+    <!-- Bootstrap CSS-->
+    <link th:href="@{/vendor/bootstrap-4.1/bootstrap.min.css}">
+
+    <!-- Vendor CSS-->
+    <!--    <link href="../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">-->
+    <!--    <link rel="stylesheet" th:href="@{/vendor/animsition/animsition.min.css}">-->
+
+    <link th:href="@{/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css}">
+    <link th:href="@{/vendor/wow/animate.css}">
+    <link th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+    <link th:href="@{/vendor/slick/slick.css}">
+    <link th:href="@{/vendor/select2/select2.min.css}">
+    <link th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}">
+
+    <!-- Main CSS-->
+    <link th:href="@{/css/theme.css}">
+
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+<div class="page-wrapper">
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar2">
+        <div class="logo">
+            <a th:href="@{/main}">
+                <img src="../static/logo-white.png" th:src="logo-white.png" alt="Cool Admin"/>
+            </a>
+        </div>
+        <div class="menu-sidebar2__content js-scrollbar1">
+            <div class="account2">
+                <div class="image img-cir img-120">
+                    <img src="../static/avatar-big-01.jpg" th:src="avatar-big-01.jpg" alt="John Doe"/>
+                </div>
+                <h4 class="name" th:text="${xUser.name}"></h4>
+                <a th:href="@{/logout}">Sign out</a>
+            </div>
+            <nav class="navbar-sidebar2">
+                <ul class="list-unstyled navbar__list">
+                    <li class="active has-sub">
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        </ul>
+                    </li>
+
+                    <!-- Dashboard -->
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-institution"></i>Dashboard</a>
+                    </li>
+
+                    <!-- END Dashboard -->
+                    <!-- Markets -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Markets</a>
+                    </li>
+
+                    <!-- END Markets -->
+                    <!-- Activity -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Activity (tested)</a>
+                    </li>
+
+                    <!-- END Activity -->
+                    <!-- Linked accounts -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/linked-accounts}">
+                            <i class="fa fa-envelope"></i>Linked accounts</a>
+                    </li>
+
+                    <!-- END Linked accounts -->
+                    <!-- Profile -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/profile}">
+                            <i class="fa fa-user"></i>Profile</a>
+                    </li>
+
+                    <!-- END Profile -->
+
+                    <!-- BUTTONS -->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/cryptoservices}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | Crypto</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/cryptoservices}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | Real Estate</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/cryptoservices}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | Stock</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="has-sub">-->
+                    <!--                        <a th:href="@{/ico}">-->
+                    <!--                            <div class="au-btn au-btn-icon au-btn&#45;&#45;blue">-->
+                    <!--                                <i>Requisites | IPO | ICO</i>-->
+                    <!--                            </div>-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!-- END BUTTONS -->
+
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <!-- END MENU SIDEBAR -->
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                        <!-- SEARCH FORM -->
+
+                        <!-- END SEARCH FORM -->
+                        <!-- MENU FORM -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER DESKTOP-->
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <!-- BANNER SERVICES -->
+
+                <!-- END BANNER SERVICES -->
+                <!-- END STATISTIC-->
+
+                <!-- FIRST TABLE -->
+                <!-- Main Exchanges -->
+                <div class="margin-left">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="au-card-inner">
+                                <form th:method="POST" th:action="@{/do-login}">
+                                    <div class="row123">
+                                        <div class="col-50">
+                                            <h3>Banks</h3>
+                                            <label for="fname"><i class="fa fa-user"></i> Account name</label>
+                                            <input type="text" id="fname" name="firstname"
+                                                   placeholder="EUR Pekao">
+                                            <label for="email"><i class="fa fa-envelope"></i> IBAN (API Key)</label>
+                                            <input type="text" id="email" name="email"
+                                                   placeholder="PL89124043571978001108412555">
+                                            <label for="adr"><i class="fa fa-address-card-o"></i>
+                                                BIC/SWIFT (secret)</label>
+                                            <input type="text" id="adr" name="address"
+                                                   placeholder="PKOPPLPW">
+                                            <label for="network"><i class="fa fa-institution"></i>
+                                                CURRENCY (Group | expiration date)</label>
+                                            <input type="text" id="network" name="city" placeholder="EUR">
+
+                                            <div class="suka">
+                                                <input type="submit" value="Continue to checkout"
+                                                       class="btn">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Main Exchanges -->
+                <!-- END FIRST TABLE   -->
+
+                <!-- Currently, accounts 2 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title-5 m-b-35"></h3>
+                        <div class="table-data__tool">
+                            <div class="table-data__tool-left">
+                                <div class="rs-select2--light rs-select2--md">
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                                <div class="rs-select2--light rs-select2--sm">
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                            </div>
+                            <div class="table-data__tool-right">
+                            </div>
+                        </div>
+                        <div class="table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                <thead>
+                                <tr class="column-title" style="width: 80%">
+                                    <th th:each="header: ${headers}" th:text="${header}"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr class="headings3" th:each="binanceAccount: ${binanceList}">
+                                    <td th:text="${binanceAccount.account_name}"></td>
+                                    <td><span class="block-email" th:text="${binanceAccount.binance_email}"></span></td>
+                                    <td th:text="${binanceAccount.public_key}"></td>
+                                    <td th:text="${binanceAccount.bic_swift}"></td>
+                                    <td th:text="${binanceAccount.currency}"></td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Send">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="More">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Currently accounts 2 -->
+
+                <!-- Currently accounts -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title-5 m-b-35"></h3>
+                        <div class="table-data__tool">
+                            <div class="table-data__tool-left">
+                                <div class="rs-select2--light rs-select2--md">
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                                <div class="rs-select2--light rs-select2--sm">
+                                    <div class="dropDownSelect2"></div>
+                                </div>
+                            </div>
+                            <div class="table-data__tool-right">
+                            </div>
+                        </div>
+                        <div class="table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                <thead>
+                                <tr>
+                                    <th>
+                                    </th>
+                                    <th>Account name</th>
+                                    <th>IBAN</th>
+                                    <th>BIC/SWIFT</th>
+                                    <th>Currency</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="tr-shadow">
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>EUR Pekao</td>
+                                    <td>
+                                        <span class="block-email">PL89124043571978001108412555</span>
+                                    </td>
+                                    <td class="desc">PKOPPLPW</td>
+                                    <td>EUR</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Send">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="More">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Currently accounts -->
+
+
+
+                <!-- Main Exchanges -->
+                <!-- End Main Exchanges -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>Copyright © 2022 LIMPET. All rights reserved. GitHud project <a
+                                    href="https://github.com/Freeman-com/Limpet1.git">Link</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTAINER-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery JS-->
+
+<script type="text/javascript" th:src="@{/static/vendor/jquery-3.2.1.min.js}"></script>
+<!-- Bootstrap JS-->
+
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-4.1/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-4.1/bootstrap.min.js}"></script>
+<!-- Vendor JS       -->
+
+<script type="text/javascript" th:src="@{/static/vendor/slick/slick.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/wow/wow.min.js}"></script>
+<script src="../static/vendor/animsition/animsition.min.js"></script>
+<script type="text/javascript" th:src="@{/static/js/main.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/counter-up/jquery.waypoints.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/counter-up/jquery.counterup.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/circle-progress/circle-progress.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/perfect-scrollbar/perfect-scrollbar.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/chartjs/Chart.bundle.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/select2/select2.min.js}"></script>
+
+<!-- Main JS-->
+<script type="text/javascript" th:src="@{/static/js/main.js}"></script>
+
+<!-- Jquery JS-->
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="vendor/slick/slick.min.js">
+</script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/animsition/animsition.min.js"></script>
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="vendor/circle-progress/circle-progress.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

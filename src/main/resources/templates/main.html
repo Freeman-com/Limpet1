@@ -2,46 +2,80 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
+
 <head>
     <!-- Required meta tags-->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
     <meta name="author" content="Anthony Kozinau">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- Title Page-->
-    <title th:text="${xUser.name}"></title>
+    <title>Dashboard</title>
 
     <!-- Font-faces CSS-->
-    <link href="../static/font-face.css" th:href="font-face.css" rel="stylesheet" media="all">
-
-    <link href="../static/font-awesome.min.css" th:href="font-awesome.min.css" rel="stylesheet" media="all">
-
-    <link href="../static/fontawesome-all.min.css" th:href="fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="../static/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link th:href="@{/static/css/font-face.css}">
+    <link th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}">
+    <link th:href="@{/vendor/font-awesome-5/css/fontawesome-all.min.css}">
+    <link th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}">
 
     <!-- Bootstrap CSS-->
-    <link href="../static/bootstrap.min.css" th:href="bootstrap.min.css" rel="stylesheet" media="all">
+    <link th:href="@{/vendor/bootstrap-4.1/bootstrap.min.css}">
+
+    <!-- Vendor CSS-->
+    <!--    <link href="../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">-->
+    <!--    <link rel="stylesheet" th:href="@{/vendor/animsition/animsition.min.css}">-->
+
+    <link th:href="@{/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css}">
+    <link th:href="@{/vendor/wow/animate.css}">
+    <link th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+    <link th:href="@{/vendor/slick/slick.css}">
+    <link th:href="@{/vendor/select2/select2.min.css}">
+    <link th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}">
 
     <!-- Main CSS-->
-    <link href="../static/theme.css" rel="stylesheet" media="all" th:href="theme.css">
+    <link th:href="@{/css/theme.css}">
 
-    <link rel="stylesheet" href="../static/main1.css">
-    <link rel="stylesheet" th:href="main1.css">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
 </head>
 
 <body class="animsition">
 <div class="page-wrapper">
     <!-- MENU SIDEBAR-->
-    <aside class="menu-sidebar2">
+    <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
-            <a href="#">
-                <img src="../static/logo-white.png" th:src="logo-white.png" alt="Cool Admin"/>
+            <a th:href="@{/main}">
+                <img src="../static/images/icon/tytu.jpg" th:src="@{/images/icon/tytu.jpg}" alt="Limpet"/>
             </a>
         </div>
         <div class="menu-sidebar2__content js-scrollbar1">
             <div class="account2">
                 <div class="image img-cir img-120">
-                    <img src="../static/avatar-big-01.jpg" th:src="avatar-big-01.jpg" alt="John Doe"/>
+                    <img src="../static/images/icon/avatar-big-01.jpg" th:src="@{/images/icon/avatar-big-01.jpg}"
+                         alt="John Doe"/>
                 </div>
                 <h4 class="name" th:text="${xUser.name}"></h4>
                 <a th:href="@{/logout}">Sign out</a>
@@ -52,29 +86,43 @@
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                         </ul>
                     </li>
-                    <li>
-                        <a th:href="@{/main}">
-                            <i></i>HOME</a>
-                    </li>
-                    <li>
-                        <a>
-                            <i></i>+ ADD Real Estate</a>
-                    </li>
-                    <li>
-                        <a th:href="@{/cryptoservices}">
-                            <i></i>+ ADD Crypto Services</a>
-                    </li>
+
+                    <!-- Dashboard -->
                     <li class="has-sub">
-                        <a>
-                            <i></i>+ ADD Stock Market</a>
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-institution"></i>Dashboard</a>
                     </li>
+
+                    <!-- END Dashboard -->
+                    <!-- Markets -->
+
                     <li class="has-sub">
-                        <a th:href="@{/ico}">
-                            <i></i>IPO | ICO</a>
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Markets</a>
                     </li>
+
+                    <!-- END Markets -->
+                    <!-- Activity -->
+
                     <li class="has-sub">
-                        <a>
-                            <i></i>Anything</a>
+                        <a class="js-arrow" th:href="@{/main}">
+                            <i class="fa fa-address-card-o"></i>Activity (tested)</a>
+                    </li>
+
+                    <!-- END Activity -->
+                    <!-- Linked accounts -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/linked-accounts}">
+                            <i class="fa fa-envelope"></i>Linked accounts</a>
+                    </li>
+
+                    <!-- END Linked accounts -->
+                    <!-- Profile -->
+
+                    <li class="has-sub">
+                        <a class="js-arrow" th:href="@{/profile}">
+                            <i class="fa fa-user"></i>Profile</a>
                     </li>
                 </ul>
             </nav>
@@ -91,24 +139,172 @@
                         <!-- SEARCH FORM -->
                         <form class="form-header" action="" method="POST">
                             <input class="au-input au-input--xl" type="text" name="search"
-                                   placeholder="Search for data &amp; reports..."/>
+                                   placeholder="Search for data's &amp; reports..."/>
                             <button class="au-btn--submit" type="submit">
                                 <i class="zmdi zmdi-search"></i>
                             </button>
                         </form>
                         <!-- END SEARCH FORM -->
+                        <div class="header-button">
+                            <div class="noti-wrap">
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-comment-more"></i>
+                                    <span class="quantity">1</span>
+                                    <div class="mess-dropdown js-dropdown">
+                                        <div class="mess__title">
+                                            <p>You have 2 news message</p>
+                                        </div>
+                                        <div class="mess__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="images/icon/avatar-06.jpg" alt="Michelle Moreno"/>
+                                            </div>
+                                            <div class="content">
+                                                <h6>Michelle Moreno</h6>
+                                                <p>Have sent a photo</p>
+                                                <span class="time">3 min ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="mess__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="images/icon/avatar-04.jpg" alt="Diane Myers"/>
+                                            </div>
+                                            <div class="content">
+                                                <h6>Diane Myers</h6>
+                                                <p>You are now connected on message</p>
+                                                <span class="time">Yesterday</span>
+                                            </div>
+                                        </div>
+                                        <div class="mess__footer">
+                                            <a href="#">View all messages</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-email"></i>
+                                    <span class="quantity">1</span>
+                                    <div class="email-dropdown js-dropdown">
+                                        <div class="email__title">
+                                            <p>You have 3 New Emails</p>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey"/>
+                                            </div>
+                                            <div class="content">
+                                                <p>Meeting about new dashboard...</p>
+                                                <span>Cynthia Harvey, 3 min ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey"/>
+                                            </div>
+                                            <div class="content">
+                                                <p>Meeting about new dashboard...</p>
+                                                <span>Cynthia Harvey, Yesterday</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__item">
+                                            <div class="image img-cir img-40">
+                                                <img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey"/>
+                                            </div>
+                                            <div class="content">
+                                                <p>Meeting about new dashboard...</p>
+                                                <span>Cynthia Harvey, April 12,,2018</span>
+                                            </div>
+                                        </div>
+                                        <div class="email__footer">
+                                            <a href="#">See all emails</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti__item js-item-menu">
+                                    <i class="zmdi zmdi-notifications"></i>
+                                    <span class="quantity">3</span>
+                                    <div class="notifi-dropdown js-dropdown">
+                                        <div class="notifi__title">
+                                            <p>You have 3 Notifications</p>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c1 img-cir img-40">
+                                                <i class="zmdi zmdi-email-open"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a email notification</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c2 img-cir img-40">
+                                                <i class="zmdi zmdi-account-box"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>Your account has been blocked</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c3 img-cir img-40">
+                                                <i class="zmdi zmdi-file-text"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a new file</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__footer">
+                                            <a href="#">All notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-wrap">
+                                <div class="account-item clearfix js-item-menu">
+                                    <div class="image">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe"/>
+                                    </div>
+                                    <div class="content">
+                                        <a class="js-acc-btn" href="#" th:text="${xUser.name}">john doe</a>
+                                    </div>
+                                    <div class="account-dropdown js-dropdown">
+                                        <div class="info clearfix">
+                                            <div class="image">
+                                                <a href="#">
+                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe"/>
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="name">
+                                                    <a href="#" th:text="${xUser.name}">john doe</a>
+                                                </h5>
+                                                <span class="email" th:text="${xUser.email}">johndoe@example.com</span>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__body">
+                                            <div class="account-dropdown__item">
+                                                <a th:href="@{/profile}">
+                                                    <i class="zmdi zmdi-account"></i>Profile</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                            </div>
+                                            <div class="account-dropdown__item">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                            </div>
+                                        </div>
+                                        <div class="account-dropdown__footer">
+                                            <a th:href="@{/logout}">
+                                                <i class="zmdi zmdi-power"></i>Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <!-- MENU FORM -->
-                        <li class="t123">
-                            <a class="settings1"><span th:text="${xUser.getName()}"></span></a>
-                            <ul class="sub-menu">
-                                <li style="float: left"><a href="#">Account</a></li>
-                                <li style="float: left"><a href="#">My Asset</a></li>
-                                <li style="float: left"><a href="#">My Orders</a></li>
-                                <li style="float: left"><a href="#">Withdrawal</a></li>
-                                <li style="float: right"><a class="active1" th:href="@{/addapipage}">Add API</a></li>
-                                <li style="float: right"><a class="active1" th:href="@{/logout}">LogOut</a></li>
-                            </ul>
-                        </li>
                     </div>
                 </div>
             </div>
@@ -118,34 +314,12 @@
         <div class="main-content">
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
+
                     <!-- BANNER SERVICES -->
                     <div class="row m-t-25">
-                        <div class="col-sm-6 col-lg-3">
-                            <div class="overview-item overview-item--c3">
-                                <div class="overview__inner">
-                                    <a th:href="@{/ico}">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-calendar-note"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>$ 0.00</h2>
-                                                <span>Building Services</span>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="text">
-                                            <h4>+ 0.00 % Week</h4>
-                                            <h4>+ 0.00 % Month</h4>
-                                        </div>
-                                        <hr>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="col-sm-6 col-lg-3">
-                            <div class="overview-item overview-item--c1">
+                            <div class="overview-item overview-item--c2">
                                 <div class="overview__inner">
                                     <a th:href="@{/cryptoservices}">
                                         <div class="overview-box clearfix">
@@ -153,9 +327,9 @@
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2 th:text="'$ ' + ${value}">
+                                                <h2 style="color: black" th:text="'$ ' + ${value}">
                                                 </h2>
-                                                <span>Crypto Services</span>
+                                                <span style="color: black">Crypto Services</span>
                                             </div>
                                         </div>
                                         <hr>
@@ -175,11 +349,36 @@
                                     <a th:href="@{/ico}">
                                         <div class="overview-box clearfix">
                                             <div class="icon">
+                                                <i class="zmdi zmdi-calendar-note"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2 style="color: black">$ 0.00</h2>
+                                                <span style="color: black">Stock Market Service</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="text">
+                                            <h4>+ 0.00 % Week</h4>
+                                            <h4>+ 0.00 % Month</h4>
+                                        </div>
+                                        <hr>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="overview-item overview-item--c3">
+                                <div class="overview__inner">
+                                    <a th:href="@{/ico}">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2 th:text="'$ 0.00' "></h2>
-                                                <span>IPO | ICO Services</span>
+                                                <h2 style="color: black" th:text="'$ 0.00' "></h2>
+                                                <span style="color: black">IPO | ICO Services</span>
                                             </div>
                                         </div>
                                         <hr>
@@ -194,16 +393,16 @@
                         </div>
 
                         <div class="col-sm-6 col-lg-3">
-                            <div class="overview-item overview-item--c3">
+                            <div class="overview-item overview-item--c4">
                                 <div class="overview__inner">
                                     <a th:href="@{/ico}">
                                         <div class="overview-box clearfix">
                                             <div class="icon">
-                                                <i class="zmdi zmdi-calendar-note"></i>
+
                                             </div>
                                             <div class="text">
-                                                <h2>$ 0.00</h2>
-                                                <span>Stock Market Service</span>
+                                                <h2 style="color: black">$ 0.00</h2>
+                                                <span style="color: black">Building Services</span>
                                             </div>
                                         </div>
                                         <hr>
@@ -218,6 +417,8 @@
                         </div>
                     </div>
                     <!-- END BANNER SERVICES -->
+
+
                     <!-- END STATISTIC-->
                     <div class="section__content section__content--p30">
                         <!-- FIRST TABLE -->
@@ -242,25 +443,31 @@
                                 </div>
                             </div>
                             <!-- END FIRST TABLE   -->
-                            <!-- Main Exchanges -->
-                            <div class="col-lg-3">
-                                <!--                                                                <h2 class="title-1 m-b-25">Main Exchanges</h2>-->
-                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
-                                    <div class="au-card-inner">
-                                        <div class="table-responsive">
-                                            <table class="table table-top-countries">
-                                                <tbody>
-                                                <tr>
-                                                    <td>Binance</td>
-                                                    <td class="text-right">$119,366.96</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ascendex</td>
-                                                    <td class="text-right">$70,261.65</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                            <div class="col-sm-3 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-account-o"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h3 style="color: black"
+                                                    th:text="'Current Balance: $ ' + ${value}"></h3>
+                                                <hr>
+                                                <h3 style="color: black"
+                                                    th:text="'Profit: $ ' + ${value}"></h3>
+                                                <hr>
+                                                <h4 style="color: black"
+                                                    th:text="'Net Cost: $ ' + ${value/200}"></h4>
+                                            </div>
+
                                         </div>
+                                        <hr>
+                                        <div class="text">
+                                            <h4>+ 0.00 % Week</h4>
+                                            <h4>+ 0.00 % Month</h4>
+                                        </div>
+                                        <hr>
                                     </div>
                                 </div>
                             </div>
@@ -294,19 +501,21 @@
                             <!-- END MAIN TABLE   -->
                             <!-- Main Exchanges -->
                             <div class="col-lg-3">
-                                <h2 class="title-1 m-b-25">Payment Services</h2>
+                                <h2 class="title-1 m-b-25">Wallets</h2>
                                 <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
                                     <div class="au-card-inner">
                                         <div class="table-responsive">
                                             <table class="table table-top-countries">
                                                 <tbody>
                                                 <tr>
-                                                    <td>Payoneer</td>
-                                                    <td class="text-right">$ 550.50</td>
+                                                    <td>BTC</td>
+                                                    <td class="text-right">0xCF1E58Cc016E993ea2CF2Cc52DBb3aD657C114E4
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>PayPal</td>
-                                                    <td class="text-right">$ 2470.10</td>
+                                                    <td>ETH</td>
+                                                    <td class="text-right">0xCF1E58Cc016E993ea2CF2Cc52DBb3aD657C114E4
+                                                    </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -331,5 +540,119 @@
         </div>
     </div>
 </div>
+
+<!-- Jquery JS-->
+
+<script type="text/javascript" th:src="@{/static/vendor/jquery-3.2.1.min.js}"></script>
+<!-- Bootstrap JS-->
+
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-4.1/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-4.1/bootstrap.min.js}"></script>
+<!-- Vendor JS       -->
+
+<script type="text/javascript" th:src="@{/static/vendor/slick/slick.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/wow/wow.min.js}"></script>
+<script src="../static/vendor/animsition/animsition.min.js"></script>
+<script type="text/javascript" th:src="@{/static/js/main.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/counter-up/jquery.waypoints.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/counter-up/jquery.counterup.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/circle-progress/circle-progress.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/perfect-scrollbar/perfect-scrollbar.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/chartjs/Chart.bundle.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/vendor/select2/select2.min.js}"></script>
+
+<!-- Main JS-->
+<script type="text/javascript" th:src="@{/static/js/main.js}"></script>
+
+<!-- Jquery JS-->
+<script src="vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="vendor/slick/slick.min.js">
+</script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/animsition/animsition.min.js"></script>
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="vendor/circle-progress/circle-progress.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="js/main.js"></script>
+
 </body>
 </html>
+
+
+<!-- Main Exchanges -->
+<!--                            <div class="col-lg-3">-->
+<!--                                &lt;!&ndash;                                                                <h2 class="title-1 m-b-25">Main Exchanges</h2>&ndash;&gt;-->
+<!--                                <div class="au-card au-card&#45;&#45;bg-gray au-card-top-countries m-b-40">-->
+<!--                                    <div class="au-card-inner">-->
+<!--                                        <div class="table-responsive">-->
+<!--                                            <table class="table table-top-countries">-->
+<!--                                                <tbody>-->
+<!--                                                <tr>-->
+<!--                                                    <td style="font-size: 16px;">Current Balance</td>-->
+<!--                                                    <td style="font-size: 18px;" class="text-right">$119,366.96</td>-->
+<!--                                                </tr>-->
+
+<!--                                                <tr>-->
+<!--                                                    <td>All Time Profit</td>-->
+<!--                                                    <td class="text-right">$70,261.65</td>-->
+<!--                                                </tr>-->
+<!--                                                <tr>-->
+<!--                                                    <td></td>-->
+<!--                                                    <td class="text-right">523.43%</td>-->
+<!--                                                </tr>-->
+<!--                                                <tr>-->
+<!--                                                    <td>Net Cost</td>-->
+<!--                                                    <td class="text-right">$5,000.00</td>-->
+<!--                                                </tr>-->
+<!--                                                </tbody>-->
+<!--                                            </table>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row m-t-25">-->
+
+
+<!--<head>-->
+<!--    &lt;!&ndash; Required meta tags&ndash;&gt;-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <meta name="description" content="au theme template">-->
+<!--    <meta name="author" content="Anthony Kozinau">-->
+<!--    &lt;!&ndash; Title Page&ndash;&gt;-->
+<!--    <title th:text="${xUser.name}"></title>-->
+
+<!--    &lt;!&ndash; Font-faces CSS&ndash;&gt;-->
+<!--    <link href="../static/font-face.css" th:href="font-face.css" rel="stylesheet" media="all">-->
+
+<!--    <link href="../static/font-awesome.min.css" th:href="font-awesome.min.css" rel="stylesheet" media="all">-->
+
+<!--    <link href="../static/fontawesome-all.min.css" th:href="fontawesome-all.min.css" rel="stylesheet" media="all">-->
+<!--    <link href="../static/material-design-iconic-font.min.css" rel="stylesheet" media="all">-->
+
+<!--    &lt;!&ndash; Bootstrap CSS&ndash;&gt;-->
+<!--    <link href="../static/bootstrap.min.css" th:href="bootstrap.min.css" rel="stylesheet" media="all">-->
+
+<!--    &lt;!&ndash; Main CSS&ndash;&gt;-->
+<!--    <link href="../static/theme.css" rel="stylesheet" media="all" th:href="theme.css">-->
+
+<!--    <link rel="stylesheet" href="../static/main1.css">-->
+<!--    <link rel="stylesheet" th:href="main1.css">-->
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" th:href="transaction.css">-->
+<!--</head>-->
